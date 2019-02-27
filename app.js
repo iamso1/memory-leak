@@ -3,12 +3,11 @@ const schedule = require('node-schedule');
 const moment = require('moment');
 
 var server = net.createServer(function(socket) {
-  console.log('wawaji in');
   socket.on('data', function(data) {
     socket.write(data);
   });
   socket.on('error', function() {
-    console.log('wawa socket error, lose connection');
+    console.log('socket error, lose connection');
   });
 });
 

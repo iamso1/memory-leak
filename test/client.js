@@ -1,4 +1,3 @@
-//模擬娃娃機連線行為
 var net = require('net');
 var conn;
 var quitting = false;
@@ -23,7 +22,7 @@ var timer;
 
   conn.on('data', function(data) {
     console.log(data);
-    console.log('wawaji receive data from server:', data);
+    console.log('receive data from server:', data);
   });
 
   conn.on('error', function(err) {
