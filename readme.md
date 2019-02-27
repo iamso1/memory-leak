@@ -17,3 +17,9 @@
 於 pm2 輸出 log 中可看到 process 使用量 每一分鐘取樣一次
 
 放置幾個小時後 明顯看到 rss 不斷上升
+
+# Note:
+
+pm2 執行時設定 production
+
+> NODE_ENV=production pm2 start app.js
