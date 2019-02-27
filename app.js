@@ -1,5 +1,4 @@
 var net = require('net');
-const schedule = require('node-schedule');
 const moment = require('moment');
 
 var server = net.createServer(function(socket) {
@@ -11,7 +10,7 @@ var server = net.createServer(function(socket) {
   });
 });
 
-schedule.scheduleJob('* */1 * * *', function() {
+setInterval(() => {
   const memory = process.memoryUsage();
   console.log(
     moment().format('YYYY/MM/DD HH:mm:ss'),
@@ -24,5 +23,6 @@ schedule.scheduleJob('* */1 * * *', function() {
     'external',
     memory.external / (1024 * 1024),
   );
-});
+}, 60 * 1000);
+
 server.listen(3000, 'localhost');
