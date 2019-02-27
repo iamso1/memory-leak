@@ -1,4 +1,4 @@
-#說明
+# 說明
 
 測試 nodejs socket memory leak 問題
 
@@ -15,4 +15,5 @@
    > node client.js
 
 於 pm2 輸出 log 中可看到 process 使用量 每一分鐘取樣一次
-放置幾個小時後 可明顯看到 rss 不斷上升
+
+放置幾個小時後 明顯看到 rss 不斷上升
