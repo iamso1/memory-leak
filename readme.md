@@ -20,6 +20,6 @@
 
 # Note:
 
-pm2 執行時設定 production
+pm2 執行時 設定 production
 
 > NODE_ENV=production pm2 start app.js

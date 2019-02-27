@@ -1,7 +1,9 @@
 var net = require('net');
 const moment = require('moment');
 
+console.log(process.env.NODE_ENV);
 var server = net.createServer(function(socket) {
+  console.log('in');
   socket.on('data', function(data) {
     socket.write(data);
   });
